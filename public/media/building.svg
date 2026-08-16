@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Building elevation with floor levels">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c2126"/>
+      <stop offset="1" stop-color="#101215"/>
+    </linearGradient>
+    <linearGradient id="facade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22262b"/>
+      <stop offset="0.55" stop-color="#191c20"/>
+      <stop offset="1" stop-color="#121417"/>
+    </linearGradient>
+    <pattern id="grain4" width="3" height="3" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.35" fill="#ffffff" opacity="0.025"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+
+  <g stroke="#2a2e35" stroke-width="1" fill="none" opacity="0.5">
+    <path d="M0 880 H1600"/>
+    <path d="M0 920 H1600"/>
+  </g>
+
+  <g opacity="0.35" fill="#171a1e">
+    <rect x="120" y="560" width="150" height="320"/>
+    <rect x="300" y="620" width="110" height="260"/>
+    <rect x="1220" y="600" width="140" height="280"/>
+    <rect x="1390" y="650" width="110" height="230"/>
+  </g>
+
+  <rect x="520" y="220" width="560" height="660" fill="url(#facade)" stroke="#3d434c" stroke-width="1.5"/>
+
+  <g stroke="#2f343b" stroke-width="1" fill="none">
+    <path d="M520 320 H1080 M520 420 H1080 M520 520 H1080 M520 620 H1080 M520 720 H1080 M520 820 H1080"/>
+  </g>
+  <g stroke="#262b31" stroke-width="0.75" fill="none" opacity="0.8">
+    <path d="M660 220 V880 M800 220 V880 M940 220 V880"/>
+  </g>
+
+  <g fill="#c8a97e" opacity="0.07">
+    <rect x="540" y="240" width="100" height="60"/>
+    <rect x="820" y="340" width="100" height="60"/>
+    <rect x="680" y="440" width="100" height="60"/>
+    <rect x="960" y="540" width="100" height="60"/>
+    <rect x="560" y="640" width="100" height="60"/>
+    <rect x="840" y="740" width="100" height="60"/>
+  </g>
+
+  <g stroke="#c8a97e" stroke-width="0.75" opacity="0.3" fill="none">
+    <path d="M480 220 V880 M470 220 H490 M470 880 H490"/>
+  </g>
+
+  <path d="M520 220 L 800 160 L 1080 220 Z" fill="#22262b" stroke="#3d434c" stroke-width="1.5"/>
+
+  <rect width="1600" height="1000" fill="url(#grain4)"/>
+</svg>

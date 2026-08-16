@@ -1,0 +1,286 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design tokens. The immersive surface is dark so photography and masterplan
+   imagery carry the page; type and rules are the only decoration.
+   --------------------------------------------------------------------------- */
+@theme {
+  --color-ink: #0b0c0e;
+  --color-ink-raised: #131519;
+  --color-ink-soft: #1c1f24;
+  --color-line: #2a2e35;
+  --color-line-strong: #3d434c;
+  --color-bone: #f4f1ec;
+  --color-bone-dim: #b9b4ab;
+  --color-bone-faint: #7e7a73;
+  --color-sand: #c8a97e;
+  --color-sand-deep: #a8875b;
+  --color-available: #7fa88a;
+  --color-reserved: #c9a227;
+  --color-sold: #8d6060;
+
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --spacing-topbar: 3.5rem;
+  --spacing-crumbbar: 2.75rem;
+}
+
+:root {
+  --shell-chrome: calc(var(--spacing-topbar) + var(--spacing-crumbbar));
+}
+
+* {
+  min-width: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+::selection {
+  background: var(--color-sand);
+  color: var(--color-ink);
+}
+
+/* Focus is always visible — keyboard navigation is a first-class path. */
+:focus-visible {
+  outline: 2px solid var(--color-sand);
+  outline-offset: 2px;
+}
+
+/* --------------------------------- type ---------------------------------- */
+
+.vrs-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+}
+
+.vrs-eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-bone-faint);
+}
+
+.vrs-meta {
+  font-size: 0.8125rem;
+  color: var(--color-bone-dim);
+  line-height: 1.5;
+}
+
+/* -------------------------------- controls -------------------------------- */
+
+.vrs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1.25rem;
+  background: var(--color-sand);
+  color: var(--color-ink);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-sand);
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.vrs-btn:hover {
+  background: var(--color-sand-deep);
+  border-color: var(--color-sand-deep);
+}
+
+.vrs-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.vrs-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1.25rem;
+  background: transparent;
+  color: var(--color-bone);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-line-strong);
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.vrs-btn-ghost:hover {
+  border-color: var(--color-sand);
+  color: var(--color-sand);
+}
+
+.vrs-btn-ghost[aria-pressed="true"] {
+  border-color: var(--color-sand);
+  color: var(--color-sand);
+}
+
+.vrs-input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0 0.875rem;
+  background: var(--color-ink-soft);
+  border: 1px solid var(--color-line);
+  color: var(--color-bone);
+  font-size: 0.875rem;
+}
+
+.vrs-input:focus {
+  border-color: var(--color-sand);
+}
+
+/* -------------------------------- viewer ---------------------------------- */
+
+.vrs-viewer-shell {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% 0%, #191c21 0%, var(--color-ink) 72%);
+}
+
+.vrs-viewer-state {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: color-mix(in srgb, var(--color-ink) 82%, transparent);
+  color: var(--color-bone-dim);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+}
+
+.vrs-loading-line {
+  width: 4rem;
+  height: 1px;
+  background: var(--color-line-strong);
+  overflow: hidden;
+  position: relative;
+}
+
+.vrs-loading-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-sand);
+  transform: translateX(-100%);
+  animation: vrs-sweep 1.4s ease-in-out infinite;
+}
+
+@keyframes vrs-sweep {
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ------------------------------- hotspots --------------------------------- */
+
+.vrs-hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.625rem 0.375rem 0.375rem;
+  background: color-mix(in srgb, var(--color-ink) 70%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-bone) 22%, transparent);
+  backdrop-filter: blur(6px);
+  color: var(--color-bone);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.vrs-hotspot:hover,
+.vrs-hotspot-active {
+  border-color: var(--color-sand);
+  background: color-mix(in srgb, var(--color-ink) 88%, transparent);
+}
+
+.vrs-hotspot-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--color-sand);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-sand) 22%, transparent);
+  flex: none;
+}
+
+.vrs-hotspot-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.8125rem;
+  line-height: 1.25;
+}
+
+.vrs-hotspot-label em {
+  font-style: normal;
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-bone-faint);
+}
+
+/* Touch targets stay generous on small screens. */
+@media (max-width: 767px) {
+  .vrs-hotspot {
+    padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+  }
+}
+
+/* ------------------------------- surfaces --------------------------------- */
+
+.vrs-panel {
+  background: color-mix(in srgb, var(--color-ink-raised) 92%, transparent);
+  border: 1px solid var(--color-line);
+  backdrop-filter: blur(12px);
+}
+
+.vrs-rule {
+  height: 1px;
+  background: var(--color-line);
+}
+
+.vrs-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+/* --------------------------------- motion --------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

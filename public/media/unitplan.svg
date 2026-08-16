@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Residence floor plan">
+  <rect width="1200" height="900" fill="#101215"/>
+
+  <g stroke="#1c1f24" stroke-width="0.75" fill="none">
+    <path d="M0 100 H1200 M0 200 H1200 M0 300 H1200 M0 400 H1200 M0 500 H1200 M0 600 H1200 M0 700 H1200 M0 800 H1200"/>
+    <path d="M100 0 V900 M200 0 V900 M300 0 V900 M400 0 V900 M500 0 V900 M600 0 V900 M700 0 V900 M800 0 V900 M900 0 V900 M1000 0 V900 M1100 0 V900"/>
+  </g>
+
+  <rect x="160" y="120" width="880" height="660" fill="#16191d" stroke="#4a4f58" stroke-width="2.5"/>
+
+  <g stroke="#3d434c" stroke-width="1.75" fill="none">
+    <path d="M600 120 V440"/>
+    <path d="M160 440 H1040"/>
+    <path d="M840 440 V780"/>
+    <path d="M380 440 V780"/>
+  </g>
+
+  <g fill="#c8a97e" fill-opacity="0.05">
+    <rect x="162" y="122" width="436" height="316"/>
+    <rect x="602" y="122" width="436" height="316"/>
+    <rect x="162" y="442" width="216" height="336"/>
+    <rect x="382" y="442" width="456" height="336"/>
+    <rect x="842" y="442" width="196" height="336"/>
+  </g>
+
+  <g fill="none" stroke="#7fa88a" stroke-width="1.25" opacity="0.4">
+    <rect x="160" y="100" width="440" height="20"/>
+    <rect x="620" y="100" width="420" height="20"/>
+  </g>
+
+  <g stroke="#2f343b" stroke-width="1.25" fill="none">
+    <path d="M470 440 A 60 60 0 0 1 530 500"/>
+    <path d="M700 440 A 60 60 0 0 0 640 500"/>
+    <path d="M840 600 A 60 60 0 0 1 900 660"/>
+  </g>
+
+  <g stroke="#3d434c" stroke-width="1" fill="none">
+    <rect x="880" y="480" width="120" height="70"/>
+    <path d="M880 515 H1000"/>
+    <circle cx="940" cy="620" r="26"/>
+    <rect x="200" y="480" width="140" height="90"/>
+  </g>
+
+  <g fill="#7e7a73" font-family="Georgia, serif" font-size="19" letter-spacing="2">
+    <text x="200" y="180">LIVING</text>
+    <text x="640" y="180">DINING</text>
+    <text x="200" y="700">KITCHEN</text>
+    <text x="420" y="700">PRIMARY BEDROOM</text>
+    <text x="872" y="700">BATH</text>
+  </g>
+
+  <g stroke="#c8a97e" stroke-width="0.75" opacity="0.3" fill="none">
+    <path d="M160 80 H1040 M160 70 V90 M1040 70 V90"/>
+    <path d="M120 120 V780 M110 120 H130 M110 780 H130"/>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Abstract district masterplan">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#191c20"/>
+      <stop offset="1" stop-color="#111316"/>
+    </linearGradient>
+    <pattern id="grain2" width="3" height="3" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.35" fill="#ffffff" opacity="0.025"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#ground)"/>
+
+  <g stroke="#1e2a31" stroke-width="1.5" fill="#0f171b" opacity="0.9">
+    <path d="M-20 820 C 220 780, 420 860, 660 830 C 900 800, 1120 870, 1620 830 L 1620 1020 L -20 1020 Z"/>
+  </g>
+  <g stroke="#24343d" stroke-width="1" fill="none" opacity="0.6">
+    <path d="M-20 860 C 240 822, 440 900, 680 868 C 920 838, 1140 906, 1620 868"/>
+    <path d="M-20 900 C 240 864, 440 940, 680 908 C 920 878, 1140 944, 1620 908"/>
+  </g>
+
+  <g stroke="#3d434c" stroke-width="1.25" fill="none">
+    <path d="M0 300 L 1600 260"/>
+    <path d="M0 620 L 1600 590"/>
+    <path d="M300 0 L 340 800"/>
+    <path d="M780 0 L 800 800"/>
+    <path d="M1240 0 L 1250 800"/>
+  </g>
+
+  <g fill="none" stroke="#2a2e35" stroke-width="1">
+    <rect x="60" y="330" width="220" height="260"/>
+    <rect x="360" y="320" width="400" height="270"/>
+    <rect x="820" y="300" width="400" height="280"/>
+    <rect x="1270" y="290" width="270" height="290"/>
+    <rect x="80" y="60" width="200" height="210"/>
+    <rect x="360" y="50" width="400" height="220"/>
+    <rect x="820" y="40" width="400" height="220"/>
+    <rect x="1270" y="30" width="270" height="230"/>
+    <rect x="60" y="640" width="260" height="150"/>
+    <rect x="380" y="640" width="380" height="150"/>
+    <rect x="830" y="630" width="390" height="150"/>
+    <rect x="1270" y="620" width="270" height="160"/>
+  </g>
+
+  <g fill="#c8a97e" opacity="0.14">
+    <rect x="400" y="360" width="120" height="90"/>
+    <rect x="560" y="380" width="90" height="140"/>
+    <rect x="880" y="340" width="140" height="100"/>
+    <rect x="1060" y="360" width="90" height="150"/>
+    <rect x="1310" y="330" width="150" height="120"/>
+  </g>
+
+  <g fill="none" stroke="#7fa88a" stroke-width="1" opacity="0.3">
+    <circle cx="200" cy="460" r="70"/>
+    <path d="M150 460 L 250 460 M200 410 L 200 510"/>
+  </g>
+
+  <rect width="1600" height="1000" fill="url(#grain2)"/>
+</svg>
